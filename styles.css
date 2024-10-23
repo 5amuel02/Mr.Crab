@@ -1,0 +1,306 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #cce7f0; /* Warna biru muda, seperti laut */
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+body.fade-in {
+  opacity: 1;
+}
+header {
+  background-color: #ff4d4d; /* Warna merah untuk Tuan Krab */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  width: 100%;
+  justify-content:space-evenly;
+  align-items: center;
+  box-sizing: border-box;
+  height: 100px;
+}
+header img{
+  width: 100px;
+}
+nav {
+  position: relative;
+  display: flex;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+}
+nav ul li {
+    margin: 0 40px;
+    font-size: 1.5em;
+}
+
+.burger {
+    display: none; /* Tersembunyi secara default */
+    font-size: 30px; /* Ukuran ikon burger */
+    cursor: pointer; /* Pointer saat hover */
+}
+nav a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 40px;
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.about{
+  margin-top: -50px;
+  margin-bottom: 20px;
+}
+.section-img{
+  margin-left: 50px;
+}
+.section-img img{
+  width: 200px;
+  margin: 10px;
+  border: 1px solid #ff4d4d;
+}
+
+.section-img img:nth-child(1){
+  position: absolute;
+  left: 800px;
+  top:250px
+}
+.section-img img:nth-child(2){
+  position: absolute;
+  left: 940px;
+  top:200px
+}
+section h1{
+  font-size: 2em;
+}
+
+.bagian-2{
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    text-align: justify;
+    background-color: #ff4d4d;
+    padding: 10px;
+    color: white;
+}
+.berikutnya{
+    width: 60%;
+    margin: 0 auto;
+    text-align: justify;
+    display: flex;
+    justify-content: space-evenly;
+    border: 1px solid #ff4d4d;
+    padding: 20px;
+    gap: 10px;
+    border-radius: 50px ;
+    background-color: #ff4d4d;
+    color: white;
+    align-items: center;
+}
+.berikutnya p{
+    width: 70%;
+}
+.berikutnya ul{
+    width: 70%;
+    list-style: none;
+}
+.berikutnya h1{
+    width: 30%;
+    text-align: left;
+}
+.berikutnya:nth-child(4){
+    margin-top: 50px;
+}
+.berikutnya:nth-child(10){
+    margin-bottom: 100px;
+}
+.berikutnya:nth-child(4),.berikutnya:nth-child(5),.berikutnya:nth-child(6),.berikutnya:nth-child(7),.berikutnya:nth-child(8),.berikutnya:nth-child(9),.berikutnya:nth-child(10){
+    margin-top: 20px;
+}
+.menu{
+    margin: 0 auto;
+    width: 88%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.menu img{
+    width: 300px;
+    height: 300px;
+    border: 5px solid #ff4d4d;
+    transition: 0.5s;
+}
+.section-menu{
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+.section-menu img{
+    width: 500px;
+    height: 500px;
+    opacity: 1;
+    transition: opacity 0.5s ease ;
+}
+.menu img:hover{
+    opacity: 0.8;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+.section-menu img .fade-out {
+    opacity: 0; 
+    transition: opacity 0.5s ease;
+}
+
+
+footer {
+  background-color: #ff4d4d;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+form {
+  background-color: #ffebcc;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  margin: 20px 80px;
+}
+.cntct{
+  display: flex;
+}
+label {
+  font-weight: bold;
+}
+
+input[type="text"], input[type="email"] {
+  width: 90%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #e63946;
+}
+
+
+/* CSS BreakOut */
+@media (max-width: 768px) {
+    body{
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
+    .nav-links {
+        display: none; 
+        flex-direction: column;
+        position: fixed; 
+        background: rgba(235, 11, 11, 0.95); 
+        top: -20px; 
+        left: 0; 
+        right: 0; 
+        bottom: -20px; 
+        padding: 50px 0; 
+        z-index: 1000; 
+        transition: transform 3s ease-in-out; 
+        transform: translateY(-100%); 
+    }
+
+    .burger {
+        z-index: 10001;
+        display: block;
+        position: fixed; 
+        top: 10px; 
+        right: 10px;
+    }
+
+    .nav-links.active {
+        display: flex; 
+        transform: translateY(0); 
+    }
+
+    nav a {
+        padding: 10px;
+        text-align: center; 
+        font-size: 24px; 
+    }
+    .section-img img:nth-child(1){
+        position: absolute;
+        left: 100px;
+        top:250px;
+        z-index:-1;
+      }
+    .section-img img:nth-child(2){
+      position: absolute;
+      left: 140px;
+      top:200px;
+      z-index:-1;
+    }
+    .first{
+      text-shadow:0px 0px 10px red;
+    }
+    .berikutnya{
+      flex-direction: column;
+      align-items: center;
+      box-sizing: border-box;
+    }
+    .berikutnya h1{
+      width: 80%;
+    }
+    .cntct{
+      flex-direction: column;
+      justify-content: start;
+    }
+    .cntct form{
+      margin-left: -20px;
+      margin-bottom: 200px;
+      width: 250px;
+    }
+    .top{
+    width: 60%;
+    }
+    .section-menu img{
+        width: 200px;
+        height: 200px;
+    }
+    .berikutnya h1{
+        text-align: center;
+        width: 80%;
+        font-size: 1em;
+    }
+    #contactForm{
+      margin-left: 10px;
+    }
+    
+}

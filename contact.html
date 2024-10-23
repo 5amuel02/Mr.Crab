@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Tuan Krab</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <style>
+    .error-message {
+      color: red;
+      font-size: 0.9em;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="removebg.png" alt="">
+    <nav>
+      <div class="burger" id="burger-menu">
+        &#9776; 
+    </div>
+    <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="cntct">
+      <div class="top">
+        <h1 data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000">Contact Kami</h1>
+      <h2 data-aos="fade-right" data-aos-delay="800" data-aos-duration="1000">Hubungi kami</h2>
+      <p data-aos="fade-right" data-aos-delay="1000" data-aos-duration="1000">Silakan isi formulir di samping ini untuk menghubungi kami:</p>
+      </div>
+
+      <form id="contactForm" action="submit_form.php" method="POST" novalidate data-aos="flip-up" data-aos-delay="1200" data-aos-duration="1000">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <input type="submit" value="Submit">
+        <div id="errorContainer" class="error-message"></div>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 Krusty Krab (SAM-X) Inc.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="burger.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
